@@ -1,58 +1,188 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Mimar Platform (معمار)
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+> **"ابنِ بثقة، ابدأ بمعمار"**
 
-## About Laravel
+منصة رقمية **Two-Sided Marketplace** تربط الحرفيين المهرة (سباكين، كهربائيين، نجارين، بنّائين...) بأصحاب المنازل والشركات والمنظمات في فلسطين، ضمن بيئة موثوقة وشفافة وآمنة.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+---
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## 1. About
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+Mimar (معمار) هي منصة تربط طالبي خدمات الصيانة والبناء بحرفيين موثوقين تم فحصهم عبر آلية اعتماد من 5 مراحل، مع نظام دفع مُعلّق (Escrow) وضمان جودة لمدة 30 يومًا.
 
-## Learning Laravel
+المشروع مبني بلغة **PHP / Laravel** كتطبيق ويب متكامل (Blade Views + Controllers + Services + Repositories)، بدون فصل REST API منفصل — أي أن الواجهة الأمامية والخلفية ضمن نفس تطبيق Laravel.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## 2. Project Vision
 
-In addition, [Laracasts](https://laracasts.com) contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+أن تكون "معمار" المنصة الأولى والأكثر ثقة لربط الحرفيين بالعملاء في فلسطين، عبر بناء منظومة ثقة (دفع آمن + ضمان + فحص صارم) يصعب تقليدها، والاستفادة من ميزة الريادة (First-Mover Advantage) في سوق إعادة الإعمار.
 
-You can also watch bite-sized lessons with real-world projects on [Laravel Learn](https://laravel.com/learn), where you will be guided through building a Laravel application from scratch while learning PHP fundamentals.
+## 3. Business Problem
 
-## Agentic Development
+1. **عدم تماثل المعلومات** — لا معلومات موثوقة عن جودة الحرفي أو سعره.
+2. **غياب الشفافية السعرية** — تفاوت حاد بالأسعار واستغلال.
+3. **صعوبة الوصول** — الاعتماد على مجموعات فيسبوك غير المنظمة.
+4. **غياب الحماية القانونية** — لا عقود رسمية ولا آلية لاسترداد الحقوق.
 
-Laravel's predictable structure and conventions make it ideal for AI coding agents like Claude Code, Cursor, and GitHub Copilot. Install [Laravel Boost](https://laravel.com/docs/ai) to supercharge your AI workflow:
+## 4. Solution
 
-```bash
-composer require laravel/boost --dev
+منصة رقمية تدير دورة حياة كاملة للطلب: إنشاء الطلب → مطابقة جغرافية للحرفيين → عروض أسعار → قبول عرض → دفع Escrow → تنفيذ العمل → تأكيد وتحرير الدفعة → ضمان 30 يوم → تقييم.
 
-php artisan boost:install
+## 5. Main Features
+
+- تسجيل ودخول للعملاء (B2C/B2B/B2NGO) والحرفيين والأدمن.
+- آلية اعتماد الحرفيين من 5 مراحل (Vetting Process).
+- إنشاء طلبات خدمة مع صور وموقع GPS.
+- خوارزمية مطابقة جغرافية للحرفيين المؤهلين.
+- عروض أسعار (Offers) من الحرفيين.
+- نظام دفع معلّق (Escrow) مع عمولة 15%.
+- إدارة المهام (Jobs) من الحجز حتى الإتمام.
+- ضمان "معمار" لمدة 30 يومًا بعد إتمام العمل.
+- نظام تقييمات ثنائي الاتجاه (عميل ↔ حرفي).
+- نظام نزاعات (Disputes) وصندوق تعويض طارئ (Emergency Fund).
+- اشتراكات مميزة للحرفيين (Premium) واشتراكات مؤسسية (Enterprise).
+- لوحة تحكم أدمن لإدارة الفحص، النزاعات، والتقارير.
+
+## 6. User Roles
+
+| الدور | الوصف |
+|---|---|
+| **Client (B2C/B2B/B2NGO)** | ينشئ طلبات خدمة، يقبل عروضًا، يدفع، يقيّم |
+| **Craftsman** | يمر بعملية اعتماد، يستقبل إشعارات الطلبات، يقدّم عروضًا، ينفذ المهام |
+| **Admin (COO)** | يدير عملية فحص الحرفيين، يحل النزاعات، يراقب النظام |
+
+راجع `docs/ROLES.md` للتفاصيل الكاملة للصلاحيات.
+
+## 7. Project Structure
+
+```
+mimar-platform/
+├── README.md
+├── docs/
+│   ├── DATABASE.md        # مخطط قاعدة البيانات والعلاقات
+│   ├── FLOW.md             # دورة حياة الطلب والعمليات الأساسية
+│   ├── ROUTES.md           # كل الـ Routes (Web، لا يوجد API منفصل)
+│   ├── BUSINESS_RULES.md   # قواعد العمل والقيود
+│   ├── ROLES.md            # الأدوار والصلاحيات
+│   ├── DEPLOYMENT.md       # خطوات التثبيت والنشر
+│   └── SEQUENCE.md         # Sequence Diagrams بالنص
+│
+├── app/
+│   ├── Http/
+│   │   ├── Controllers/
+│   │   └── Requests/
+│   ├── Models/
+│   ├── Services/
+│   ├── Repositories/
+│   └── Policies/
+│
+├── database/
+│   └── migrations/
+│
+└── resources/views/
 ```
 
-Boost provides your agent 15+ tools and skills that help agents build Laravel applications while following best practices.
+## 8. Database Design
 
-## Contributing
+راجع `docs/DATABASE.md` لكل الجداول والعلاقات، و`database/migrations/` لملفات الـ Migration الفعلية.
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+## 9. Installation
 
-## Code of Conduct
+```bash
+git clone <repo-url> mimar-platform
+cd mimar-platform
+composer install
+cp .env.example .env
+php artisan key:generate
+```
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+عدّل `.env` لإعدادات قاعدة البيانات (MySQL):
 
-## Security Vulnerabilities
+```env
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=mimar
+DB_USERNAME=root
+DB_PASSWORD=
+```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+```bash
+php artisan migrate --seed
+php artisan storage:link
+```
 
-## License
+## 10. Environment Variables
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+| المتغير | الوصف | مثال |
+|---|---|---|
+| `APP_ENV` | بيئة التشغيل | `local` / `production` |
+| `DB_CONNECTION` | نوع قاعدة البيانات | `mysql` |
+| `DB_DATABASE` | اسم القاعدة | `mimar` |
+| `COMMISSION_RATE` | نسبة عمولة المنصة | `0.15` |
+| `GUARANTEE_DAYS` | مدة الضمان بالأيام | `30` |
+| `EMERGENCY_FUND_RATE` | نسبة صندوق التعويض من صافي الربح | `0.02` |
+| `GOOGLE_MAPS_API_KEY` | مفتاح خرائط جوجل | — |
+
+## 11. Running Project
+
+```bash
+php artisan serve
+```
+
+التطبيق يعمل على `http://127.0.0.1:8000`.
+
+## 12. Screens (شاشات Blade)
+
+- شاشات المصادقة: تسجيل دخول/تسجيل حساب (عميل، حرفي).
+- Dashboard لكل دور (عميل / حرفي / أدمن).
+- شاشة إنشاء طلب خدمة.
+- شاشة عرض الطلبات وحالتها (اسم الخدمة، الحرفي المعيّن، الحالة، تاريخ الإنشاء، السعر المتفق عليه).
+- شاشة عروض الأسعار على طلب معيّن.
+- شاشة تفاصيل المهمة (Job) وتتبع حالتها.
+- شاشة الدفع (Escrow).
+- شاشة التقييمات.
+- شاشة إدارة اعتماد الحرفيين (Admin).
+- شاشة النزاعات (Admin).
+
+## 13. System Flow
+
+راجع `docs/FLOW.md` للتفصيل الكامل لكل دورات العمل (طلب، عرض، دفع، ضمان، نزاع، اشتراك).
+
+## 14. API Endpoints (Routes)
+
+لا يوجد REST API منفصل في هذه النسخة — كل التطبيق مبني على Blade + Web Routes. راجع `docs/ROUTES.md` لكل الـ Routes.
+
+## 15. Folder Structure
+
+راجع القسم 7 أعلاه.
+
+## 16. Coding Standards
+
+- نمط الطبقات: `Route → Controller → Service → Repository → Model → Database`.
+- كل Controller "نحيف" (Thin Controller) — المنطق في الـ Service.
+- كل استعلامات قاعدة البيانات المعقدة تمر عبر Repository.
+- تعليقات PHPDoc واضحة فوق كل دالة عامة.
+- تسمية بصيغة PascalCase للـ Classes، camelCase للدوال والمتغيرات، snake_case لأعمدة القاعدة.
+- Form Requests لكل عملية Validation بدل التحقق داخل الـ Controller.
+- Policies للتحكم بالصلاحيات (مثلاً: هل يملك العميل هذا الطلب؟).
+
+## 17. Future Work
+
+- إضافة قسم "توريد مواد البناء" (المرحلة 2 من خارطة الطريق).
+- منصة تدريب مهني رقمية (المرحلة 3).
+- تفعيل REST API منفصل لدعم تطبيق React Native مستقبلاً.
+- تكامل فعلي مع Jawwal Pay / PalPay / بنك فلسطين.
+- تفعيل خوارزمية مطابقة جغرافية حقيقية عبر Google Maps API.
+
+## 18. Contributors
+
+- بهاء أبو قاسمية
+- معاذ ماجد الرنتيسي
+
+مبني بالاستناد إلى خطة عمل "معمار" (ITAP4312 E-Business — جامعة الأقصى) ومواصفات تحليل وتصميم مقرر هندسة البرمجيات.
+
+---
+
+## ⚠️ ملاحظة مهمة
+
+إذا كان هذا المستند/الكود مخصصًا للتسليم الأكاديمي (Part 2) لمقرر هندسة البرمجيات، تذكّر أن تعليمات ذلك التسليم تطلب **تحليل وتصميم فقط بدون كود تنفيذي**. استخدم مجلد `docs/` (خصوصًا Use Cases وClass Diagram المفاهيمي) لهذا الغرض، ولا ترفق كود Laravel الفعلي كجزء من ذلك التسليم.
